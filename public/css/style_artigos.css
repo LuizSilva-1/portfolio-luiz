@@ -1,0 +1,24 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #e0f7fa;
+}
+
+header {
+    background-color: #006064;
+    color: white;
+    padding: 10px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: #004d40;
+}
+
+section {
+    padding: 20px;
+}

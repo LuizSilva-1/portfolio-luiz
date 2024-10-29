@@ -1,0 +1,24 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #fff8e1;
+}
+
+header {
+    background-color: #ffb300;
+    color: white;
+    padding: 10px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: #f57f17;
+}
+
+section {
+    padding: 20px;
+}
