@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style_artigos.css">
-    <title>Portfolio - Artigos</title>
+    <title>Artigos - Luiz DevOps Portfolio</title>
 </head>
 <body>
-    <header>
-        <h1>Meus Artigos</h1>
-        <nav>
-            <a href="/">Início</a>
-            <a href="/artigos">Artigos</a>
-            <a href="/projetos">Projetos</a>
-            <a href="/certificacoes">Certificações</a>
-        </nav>
-    </header>
-    <section>
-        <h2>Lista de Artigos</h2>
-        <ul>
-            <li><a href="#">Artigo 1</a></li>
-            <li><a href="#">Artigo 2</a></li>
-            <li><a href="#">Artigo 3</a></li>
-        </ul>
+    <!-- Navbar -->
+    <%- include('partials/navbar'); %>
+
+    <!-- Hero Section com Gradiente Animado -->
+    <section class="hero">
+        <h1>Artigos</h1>
+        <p>Explore artigos escritos sobre tecnologia, DevOps, e computação em nuvem.</p>
     </section>
+
+    <!-- Conteúdo de Artigos -->
+    <section class="content">
+        <!-- Aqui você pode listar ou adicionar resumos de artigos -->
+    </section>
+
+    <!-- Rodapé com Links de Contato -->
+    <footer class="footer">
+        <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+        <a href="mailto:youremail@example.com">Email</a>
+    </footer>
 </body>
 </html>

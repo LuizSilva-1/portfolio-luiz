@@ -4,25 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style_projetos.css">
-    <title>Portfolio - Projetos</title>
+    <title>Projetos - Luiz DevOps Portfolio</title>
 </head>
 <body>
-    <header>
-        <h1>Meus Projetos</h1>
-        <nav>
-            <a href="/">Início</a>
-            <a href="/artigos">Artigos</a>
-            <a href="/projetos">Projetos</a>
-            <a href="/certificacoes">Certificações</a>
-        </nav>
-    </header>
-    <section>
-        <h2>Projetos Realizados</h2>
-        <ul>
-            <li><a href="#">Projeto Kubernetes</a></li>
-            <li><a href="#">Projeto Docker</a></li>
-            <li><a href="#">Projeto Grafana</a></li>
-        </ul>
+    <!-- Navbar -->
+    <%- include('partials/navbar'); %>
+
+    <!-- Hero Section com Gradiente Animado -->
+    <section class="hero">
+        <h1>Projetos</h1>
+        <p>Principais projetos desenvolvidos com foco em DevOps e automação.</p>
     </section>
+
+    <!-- Conteúdo de Projetos -->
+    <section class="projects-content">
+        <div class="project-cards">
+            <div class="card">
+                <h3>Automação com Ansible</h3>
+                <p>Automação de provisionamento e gerenciamento de infraestrutura com Ansible, facilitando a implantação de ambientes complexos.</p>
+                <a href="/projetos/ansible" class="btn-more">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <h3>Infraestrutura como Código com Terraform</h3>
+                <p>Desenvolvimento e provisionamento de infraestrutura em nuvem usando Terraform, promovendo consistência e eficiência.</p>
+                <a href="/projetos/terraform" class="btn-more">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <h3>Linux Server Configuration</h3>
+                <p>Configuração e otimização de servidores Linux para ambientes de produção, com foco em segurança e desempenho.</p>
+                <a href="/projetos/linux-server" class="btn-more">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <h3>CI/CD com GitLab e GitHub</h3>
+                <p>Implementação de pipelines de CI/CD usando GitLab e GitHub Actions para automação de testes e deploys contínuos.</p>
+                <a href="/projetos/cicd" class="btn-more">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <h3>Monitoramento com Grafana</h3>
+                <p>Monitoramento de infraestrutura com Grafana e Prometheus, permitindo a visualização em tempo real e alertas proativos.</p>
+                <a href="/projetos/grafana" class="btn-more">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <h3>Kubernetes Cluster</h3>
+                <p>Configuração de um cluster Kubernetes de alta disponibilidade para orquestração de contêineres em larga escala.</p>
+                <a href="/projetos/kubernetes" class="btn-more">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé com Links de Contato -->
+    <footer class="footer">
+        <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+        <a href="mailto:youremail@example.com">Email</a>
+    </footer>
 </body>
 </html>

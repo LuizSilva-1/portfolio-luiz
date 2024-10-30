@@ -23,32 +23,42 @@ body {
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    background: linear-gradient(135deg, #282c34, #4b6cb7);
-    color: white;
+    background-color: #f4f4f4;
+    color: #333;
     padding: 50px 20px;
-    animation: gradientBG 5s ease infinite;
-}
-
-@keyframes gradientBG {
-    0% { background: #282c34; }
-    50% { background: #4b6cb7; }
-    100% { background: #282c34; }
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Profile Picture and CV Link */
+.profile-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-picture {
     width: 150px;
     border-radius: 50%;
-    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .download-cv {
-    display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -56,86 +66,153 @@ body {
     text-decoration: none;
     transition: background-color 0.3s;
 }
+
 .download-cv:hover {
     background-color: #555;
 }
 
-/* Skills Section */
-.skills {
-    padding: 40px 20px;
-    background: #f7f7f7;
-    text-align: center;
+/* Centralização do conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
+
+/* Layout de Grid para as Seções */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+/* Estilos para Seções Individuais */
+.grid-item {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary, .timeline, .about, .highlights {
+    color: #333;
+    text-align: center; 
+}
+
+.summary h2, .timeline h2, .about h2, .highlights h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Timeline */
+.timeline-list {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline-list li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.timeline-list span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Skills Progress Bars */
+.skills-progress .skill {
+    margin: 10px 0;
+    text-align: left;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #4b6cb7;
+    height: 10px;
+    transition: width 0.5s ease-in-out;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Skills Section */
 .skills h2 {
     color: #333;
     margin-bottom: 20px;
 }
+
 .skill-icons img {
-    width: 60px;   /* Largura fixa para ícones */
-    height: 60px;  /* Altura fixa para ícones */
+    width: 60px;
+    height: 60px;
     margin: 0 15px;
     transition: transform 0.3s;
 }
+
 .skill-icons img:hover {
     transform: scale(1.2);
 }
 
-/* About Section */
-.about {
-    padding: 40px 20px;
-    background: white;
-    color: #333;
-    text-align: center;
-}
-
-/* Projects Section */
-.highlights {
-    padding: 50px 20px;
-    background-color: #f7f7f7;
-}
-.project-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-.card {
-    background-color: white;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
+/* Projects Highlights Section in List Style */
+.project-list {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 280px;
-    transition: transform 0.3s;
+    gap: 10px;
+    align-items: center;
 }
-.card h3 {
-    font-size: 1.5rem;
+
+.project-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
 }
-.card p {
-    flex-grow: 1;
-    overflow: hidden;
-    margin-bottom: 20px;
+
+.project-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
 }
-.card a {
-    display: block;
-    text-decoration: none;
+
+/* Centraliza o botão de Ver Todos os Projetos */
+.btn-view-all {
+    margin-top: 20px;
+    padding: 10px 20px;
     background-color: #333;
     color: white;
-    padding: 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: inline-block; /* Garante que o botão seja tratado como bloco inline */
+    margin-left: auto;
+    margin-right: auto;
 }
-.card a:hover {
+
+.btn-view-all:hover {
     background-color: #555;
-}
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer */
@@ -144,15 +221,27 @@ body {
     color: white;
     text-align: center;
     padding: 15px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    position: relative;
+    margin-top: 40px;
 }
+
 .footer a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
 }
+
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 10px;
+    }
 }

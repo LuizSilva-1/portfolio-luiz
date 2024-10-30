@@ -10,75 +10,144 @@
     <!-- Navbar -->
     <%- include('partials/navbar'); %>
 
-    <!-- Hero Section com Gradiente Animado -->
-    <section class="hero">
-        <h1>Luiz Fernando Maia da Silva</h1>
-        <p>Estudante apaixonado por Cloud e DevOps, buscando constantemente aprimorar minhas habilidades e adquirir mais conhecimento. Atualmente, busco oportunidades para aplicar o que tenho aprendido e crescer profissionalmente na área de tecnologia.</p>
-        <img src="/images/Devops.jpeg" alt="Foto Profissional" class="profile-picture">
-        <a href="/path-to-your-cv.pdf" class="download-cv">Baixar CV</a>
-    </section>
+    <!-- Contêiner Centralizado -->
+    <div class="container">
+        <!-- Hero Section com o mesmo estilo das demais páginas -->
+        <section class="hero">
+            <h1>Luiz Fernando Maia da Silva</h1>
+            <p>Estudante apaixonado por Cloud e DevOps, buscando constantemente aprimorar minhas habilidades e adquirir mais conhecimento. Atualmente, busco oportunidades para aplicar o que tenho aprendido e crescer profissionalmente na área de tecnologia.</p>
+            
+            <!-- Foto e link para o CV -->
+            <div class="profile-container">
+                <img src="/images/icons/luiz.jpg" alt="Foto Profissional" class="profile-picture">
+                <a href="/images/icons/luizcv.pdf" class="download-cv" target="_blank">Visualizar CV</a>
+            </div>
+        </section>
 
-    <!-- Seção de Habilidades com Ícones -->
-    <section class="skills">
-        <h2>Minhas Habilidades</h2>
-        <div class="skill-icons">
-            <img src="/images/icons/docker.png" alt="Docker" title="Docker">
-            <img src="/images/icons/kubernetes.png" alt="Kubernetes" title="Kubernetes">
-            <img src="/images/icons/linux.png" alt="Linux" title="Linux">
-            <img src="/images/icons/ansible.png" alt="Ansible" title="Ansible">
-            <img src="/images/icons/terraform.png" alt="Terraform" title="Terraform">
-            <img src="/images/icons/gitlab.png" alt="GitLab CI/CD" title="GitLab CI/CD">
-        </div>
-    </section>
+        <!-- Layout em Colunas para Resumo Profissional e Experiências -->
+        <section class="content-grid">
+            <div class="grid-item summary">
+                <h2>Resumo Profissional</h2>
+                <p>Iniciante em DevOps, focado em aprender práticas modernas de infraestrutura como código, automação e orquestração de contêineres.</p>
+            </div>
+            <div class="grid-item timeline">
+                <h2>Experiências e Estudos</h2>
+                <ul class="timeline-list">
+                    <li><span>2024</span> - Início do aprendizado em DevOps</li>
+                    <li><span>2023</span> - Primeiros passos com Docker e Kubernetes</li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Seção Sobre Mim -->
-    <section class="about">
-        <h2>Sobre Mim</h2>
-        <p>Nos últimos anos, venho estudando intensivamente sobre computação em nuvem e práticas DevOps. Meu foco é entender e aplicar soluções escaláveis e seguras usando as melhores ferramentas e práticas disponíveis no mercado, sempre em busca de novos desafios e oportunidades para aprender mais e contribuir com a área.</p>
-    </section>
+        <!-- Layout em Colunas para Habilidades e Outras Habilidades -->
+        <section class="content-grid">
+            <div class="grid-item skills-progress">
+                <h2>Minhas Habilidades</h2>
+                <div class="skill">
+                    <span>Docker</span>
+                    <div class="progress-bar"><div class="progress" data-skill="Docker"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Kubernetes</span>
+                    <div class="progress-bar"><div class="progress" data-skill="Kubernetes"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Terraform</span>
+                    <div class="progress-bar"><div class="progress" data-skill="Terraform"></div></div>
+                </div>
+            </div>
+            <div class="grid-item skills">
+                <h2>Outras Habilidades</h2>
+                <div class="skill-icons">
+                    <img src="/images/icons/docker.png" alt="Docker" title="Docker">
+                    <img src="/images/icons/kubernetes.png" alt="Kubernetes" title="Kubernetes">
+                    <img src="/images/icons/linux.png" alt="Linux" title="Linux">
+                    <img src="/images/icons/ansible.png" alt="Ansible" title="Ansible">
+                    <img src="/images/icons/terraform.png" alt="Terraform" title="Terraform">
+                    <img src="/images/icons/gitlab.png" alt="GitLab CI/CD" title="GitLab CI/CD">
+                </div>
+            </div>
+        </section>
 
-    <!-- Seção de Projetos Recentes com Animação nos Cards -->
-    <section class="highlights">
-        <h2>Projetos Recentes</h2>
-        <div class="project-cards">
-            <div class="card">
-                <h3>Kubernetes Cluster</h3>
-                <p>Configuração de um cluster Kubernetes de alta disponibilidade.</p>
-                <a href="/projetos">Ver mais 🚀</a>
+        <!-- Layout em Colunas para Sobre Mim e Projetos Recentes -->
+        <section class="content-grid">
+            <div class="grid-item about">
+                <h2>Sobre Mim</h2>
+                <p>Nos últimos anos, venho estudando intensivamente sobre computação em nuvem e práticas DevOps. Meu foco é entender e aplicar soluções escaláveis e seguras usando as melhores ferramentas e práticas disponíveis no mercado, sempre em busca de novos desafios e oportunidades para aprender mais e contribuir com a área.</p>
             </div>
-            <div class="card">
-                <h3>Monitoramento com Grafana</h3>
-                <p>Implementação de monitoramento usando Grafana e Prometheus.</p>
-                <a href="/projetos">Ver mais 🚀</a>
+            <div class="grid-item highlights">
+                <h2>Projetos Recentes</h2>
+                <ul class="project-list">
+                    <li>
+                        <img src="/images/icons/ansible.png" alt="Ansible" class="project-icon">
+                        <span>Automação com Ansible</span>
+                    </li>
+                    <li>
+                        <img src="/images/icons/terraform.png" alt="Terraform" class="project-icon">
+                        <span>Infraestrutura como Código com Terraform</span>
+                    </li>
+                    <li>
+                        <img src="/images/icons/linux.png" alt="Linux" class="project-icon">
+                        <span>Linux Server Configuration</span>
+                    </li>
+                    <li>
+                        <img src="/images/icons/gitlab.png" alt="CI/CD" class="project-icon">
+                        <span>CI/CD com GitLab e GitHub</span>
+                    </li>
+                </ul>
+                <a href="/projetos" class="btn-view-all">Ver Todos os Projetos</a>
             </div>
-            <div class="card">
-                <h3>Automação com Ansible</h3>
-                <p>Automação de provisionamento e gerenciamento de infraestrutura com Ansible.</p>
-                <a href="/projetos">Ver mais 🚀</a>
-            </div>
-            <div class="card">
-                <h3>Infraestrutura como Código com Terraform</h3>
-                <p>Desenvolvimento de infraestrutura na nuvem usando Terraform.</p>
-                <a href="/projetos">Ver mais 🚀</a>
-            </div>
-            <div class="card">
-                <h3>Linux Server Configuration</h3>
-                <p>Configuração de servidores Linux para ambiente de produção.</p>
-                <a href="/projetos">Ver mais 🚀</a>
-            </div>
-            <div class="card">
-                <h3>CI/CD com GitLab e GitHub</h3>
-                <p>Integração e entrega contínua usando GitLab CI e GitHub Actions.</p>
-                <a href="/projetos">Ver mais 🚀</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <!-- JavaScript para Calcular e Renderizar Progresso -->
+    <script type="module">
+        // Define os dados de habilidades e associa projetos a habilidades com número de projetos a princípio igual a zero
+        const skillsData = {
+            Docker: 0,
+            Kubernetes: 0,
+            Terraform: 0
+        };
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // Requisição para página de projetos
+                const response = await fetch('/projetos');
+                const projectsHTML = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(projectsHTML, 'text/html');
+
+                // Extração dos títulos dos projetos
+                const projectTitles = Array.from(doc.querySelectorAll('.project-cards .card h3')).map(h3 => h3.textContent);
+
+                // Mapeamento dos projetos por habilidade
+                projectTitles.forEach(title => {
+                    if (title.includes('Docker')) skillsData.Docker++;
+                    if (title.includes('Kubernetes')) skillsData.Kubernetes++;
+                    if (title.includes('Terraform')) skillsData.Terraform++;
+                });
+
+                // Calcula e renderiza as porcentagens para cada habilidade com base em projetos associados
+                const maxProjects = Math.max(...Object.values(skillsData)) || 1;
+                Object.entries(skillsData).forEach(([skill, count]) => {
+                    const percentage = Math.round((count / maxProjects) * 100);
+                    const progressElement = document.querySelector(`[data-skill="${skill}"]`);
+                    if (progressElement) {
+                        progressElement.style.width = `${percentage}%`;
+                        progressElement.innerText = `${percentage > 0 ? percentage : ""}%`;
+                    }
+                });
+            } catch (error) {
+                console.error("Erro ao carregar projetos:", error);
+            }
+        });
+    </script>
 
     <!-- Rodapé com Links de Contato -->
     <footer class="footer">
-        <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/your-profile" target="_blank">GitHub</a>
-        <a href="mailto:youremail@example.com">Email</a>
+        <a href="https://linkedin.com/in/luizfernandomaiadasilva/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/LuizSilva-1" target="_blank">GitHub</a>
+        <a href="mailto:luiz.network2@gmail.com">Email</a>
     </footer>
 </body>
 </html>
