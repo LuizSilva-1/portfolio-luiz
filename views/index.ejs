@@ -24,22 +24,20 @@
             </div>
         </section>
 
-        <!-- Layout em Colunas para Resumo Profissional e Experiências -->
+        <!-- Layout em Colunas para Sobre Mim e Resumo Profissional -->
         <section class="content-grid">
             <div class="grid-item summary">
                 <h2>Resumo Profissional</h2>
-                <p>Iniciante em DevOps, focado em aprender práticas modernas de infraestrutura como código, automação e orquestração de contêineres.</p>
+                <p>Sou graduado em Redes de Computadores com sólida experiência em infraestrutura e monitoramento de ambientes de TI. Atualmente, atuo como Analista de Infraestrutura, com certificação AWS e conhecimentos para administrar serviços como EC2, ECS, IAM, S3, Route53 e CloudFront. Embora atualmente eu não utilize AWS na prática devido à estrutura da empresa onde trabalho, mantenho minhas habilidades e certificações atualizadas.</p>
+                <p>Tenho grande interesse em atuar como DevOps e, para isso, estou cursando uma pós-graduação em DevOps & Continuous Software Engineering pela PUC Minas. Meu objetivo é consolidar uma carreira na área, aplicando práticas de integração contínua, automação e infraestrutura como código. Acredito que minha experiência com infraestrutura e monitoramento me oferece uma base sólida para iniciar essa jornada no campo de DevOps.</p>
             </div>
-            <div class="grid-item timeline">
-                <h2>Experiências e Estudos</h2>
-                <ul class="timeline-list">
-                    <li><span>2024</span> - Início do aprendizado em DevOps</li>
-                    <li><span>2023</span> - Primeiros passos com Docker e Kubernetes</li>
-                </ul>
+            <div class="grid-item about">
+                <h2>Sobre Mim</h2>
+                <p>Nos últimos anos, venho estudando intensivamente sobre computação em nuvem e práticas DevOps. Meu foco é entender e aplicar soluções escaláveis e seguras usando as melhores ferramentas e práticas disponíveis no mercado, sempre em busca de novos desafios e oportunidades para aprender mais e contribuir com a área.</p>
             </div>
         </section>
 
-        <!-- Layout em Colunas para Habilidades e Outras Habilidades -->
+        <!-- Layout em Colunas para Minhas Habilidades e Experiências e Estudos -->
         <section class="content-grid">
             <div class="grid-item skills-progress">
                 <h2>Minhas Habilidades</h2>
@@ -56,25 +54,17 @@
                     <div class="progress-bar"><div class="progress" data-skill="Terraform"></div></div>
                 </div>
             </div>
-            <div class="grid-item skills">
-                <h2>Outras Habilidades</h2>
-                <div class="skill-icons">
-                    <img src="/images/icons/docker.png" alt="Docker" title="Docker">
-                    <img src="/images/icons/kubernetes.png" alt="Kubernetes" title="Kubernetes">
-                    <img src="/images/icons/linux.png" alt="Linux" title="Linux">
-                    <img src="/images/icons/ansible.png" alt="Ansible" title="Ansible">
-                    <img src="/images/icons/terraform.png" alt="Terraform" title="Terraform">
-                    <img src="/images/icons/gitlab.png" alt="GitLab CI/CD" title="GitLab CI/CD">
-                </div>
+            <div class="grid-item timeline">
+                <h2>Experiências e Estudos</h2>
+                <ul class="timeline-list">
+                    <li><span>2024</span> - Início do aprendizado em DevOps</li>
+                    <li><span>2023</span> - Primeiros passos com Docker e Kubernetes</li>
+                </ul>
             </div>
         </section>
 
-        <!-- Layout em Colunas para Sobre Mim e Projetos Recentes -->
+        <!-- Layout em Colunas para Projetos Recentes e Outras Habilidades -->
         <section class="content-grid">
-            <div class="grid-item about">
-                <h2>Sobre Mim</h2>
-                <p>Nos últimos anos, venho estudando intensivamente sobre computação em nuvem e práticas DevOps. Meu foco é entender e aplicar soluções escaláveis e seguras usando as melhores ferramentas e práticas disponíveis no mercado, sempre em busca de novos desafios e oportunidades para aprender mais e contribuir com a área.</p>
-            </div>
             <div class="grid-item highlights">
                 <h2>Projetos Recentes</h2>
                 <ul class="project-list">
@@ -97,12 +87,22 @@
                 </ul>
                 <a href="/projetos" class="btn-view-all">Ver Todos os Projetos</a>
             </div>
+            <div class="grid-item skills">
+                <h2>Outras Habilidades</h2>
+                <div class="skill-icons">
+                    <img src="/images/icons/docker.png" alt="Docker" title="Docker">
+                    <img src="/images/icons/kubernetes.png" alt="Kubernetes" title="Kubernetes">
+                    <img src="/images/icons/linux.png" alt="Linux" title="Linux">
+                    <img src="/images/icons/ansible.png" alt="Ansible" title="Ansible">
+                    <img src="/images/icons/terraform.png" alt="Terraform" title="Terraform">
+                    <img src="/images/icons/gitlab.png" alt="GitLab CI/CD" title="GitLab CI/CD">
+                </div>
+            </div>
         </section>
     </div>
 
     <!-- JavaScript para Calcular e Renderizar Progresso -->
     <script type="module">
-        // Define os dados de habilidades e associa projetos a habilidades com número de projetos a princípio igual a zero
         const skillsData = {
             Docker: 0,
             Kubernetes: 0,
@@ -111,23 +111,19 @@
 
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                // Requisição para página de projetos
                 const response = await fetch('/projetos');
                 const projectsHTML = await response.text();
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(projectsHTML, 'text/html');
 
-                // Extração dos títulos dos projetos
                 const projectTitles = Array.from(doc.querySelectorAll('.project-cards .card h3')).map(h3 => h3.textContent);
 
-                // Mapeamento dos projetos por habilidade
                 projectTitles.forEach(title => {
                     if (title.includes('Docker')) skillsData.Docker++;
                     if (title.includes('Kubernetes')) skillsData.Kubernetes++;
                     if (title.includes('Terraform')) skillsData.Terraform++;
                 });
 
-                // Calcula e renderiza as porcentagens para cada habilidade com base em projetos associados
                 const maxProjects = Math.max(...Object.values(skillsData)) || 1;
                 Object.entries(skillsData).forEach(([skill, count]) => {
                     const percentage = Math.round((count / maxProjects) * 100);
