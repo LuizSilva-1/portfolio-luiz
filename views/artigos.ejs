@@ -10,22 +10,44 @@
     <!-- Navbar -->
     <%- include('partials/navbar'); %>
 
-    <!-- Hero Section com Gradiente Animado -->
-    <section class="hero">
-        <h1>Artigos</h1>
-        <p>Explore artigos escritos sobre tecnologia, DevOps, e computação em nuvem.</p>
-    </section>
+    <!-- Contêiner Centralizado -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Artigos</h1>
+            <p>Explore artigos escritos sobre tecnologia, DevOps e computação em nuvem.</p>
+        </section>
 
-    <!-- Conteúdo de Artigos -->
-    <section class="content">
-        <!-- Aqui você pode listar ou adicionar resumos de artigos -->
-    </section>
+        <!-- Conteúdo dos Artigos -->
+        <section class="content-grid">
+            <!-- Artigo 1: Dominando o Git -->
+            <div class="grid-item">
+                <h2>Dominando o Git</h2>
+                <p>Comandos essenciais e boas práticas para controle de versão em projetos colaborativos.</p>
+                <a href="/dominando-git" class="btn-view-all">Ler mais</a>
+            </div>
 
-    <!-- Rodapé com Links de Contato -->
+            <!-- Exemplo de um segundo artigo -->
+            <div class="grid-item">
+                <h2>Automatizando Deploys com Ansible</h2>
+                <p>Descubra como o Ansible pode facilitar a automação de configurações e deploys em servidores.</p>
+                <a href="/automacao-ansible" class="btn-view-all">Ler mais</a>
+            </div>
+
+            <!-- Exemplo de um terceiro artigo -->
+            <div class="grid-item">
+                <h2>Introdução ao Terraform</h2>
+                <p>Como usar o Terraform para gerenciar infraestrutura como código (IaC).</p>
+                <a href="/introducao-terraform" class="btn-view-all">Ler mais</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Rodapé -->
     <footer class="footer">
-        <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/your-profile" target="_blank">GitHub</a>
-        <a href="mailto:youremail@example.com">Email</a>
+        <a href="https://linkedin.com/in/luizfernandomaiadasilva/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/LuizSilva-1" target="_blank">GitHub</a>
+        <a href="mailto:luiz.network2@gmail.com">Email</a>
     </footer>
 </body>
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style_index.css">
+    <title>Dominando o Git - Luiz DevOps Portfolio</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <%- include('partials/navbar'); %>
+
+    <!-- Contêiner Centralizado -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Dominando o Git</h1>
+            <p>Comandos Essenciais e Boas Práticas para Controle de Versão</p>
+        </section>
+
+        <!-- Conteúdo do Artigo -->
+        <section class="content-grid">
+            <div class="grid-item summary">
+                <h2>Introdução</h2>
+                <p>O Git é uma ferramenta fundamental para o controle de versão e colaboração em projetos de software. Ele permite que equipes trabalhem juntas de forma organizada, mantendo um histórico claro de cada etapa do projeto.</p>
+            </div>
+
+            <div class="grid-item about">
+                <h2>A Jornada para o Controle de Versão</h2>
+                <p>Imagine um cenário onde diversos colaboradores estão constantemente adicionando, removendo e refinando partes de um projeto. Sem uma forma organizada de gerenciar essas mudanças, seria como tentar escrever um livro em um café movimentado. O Git surge como uma solução, trazendo estrutura para o caos potencial de projetos colaborativos.</p>
+
+                <div class="command-box">
+                    <code>git clone &lt;URL&gt;</code>
+                </div>
+                <p>O comando acima clona um repositório remoto para sua máquina local, permitindo que você comece a trabalhar com uma cópia completa do projeto.</p>
+            </div>
+
+            <div class="grid-item summary">
+                <h2>Trabalhando com Branches</h2>
+                <p>O uso de branches é uma das práticas mais poderosas do Git, permitindo que você desenvolva novas funcionalidades sem interferir no código principal.</p>
+                <div class="command-box">
+                    <code>git branch &lt;nome-da-branch&gt;</code><br>
+                    <code>git checkout &lt;nome-da-branch&gt;</code>
+                </div>
+                <p>Os comandos acima permitem criar uma nova branch e alternar para ela, mantendo o desenvolvimento isolado.</p>
+            </div>
+
+            <div class="grid-item about">
+                <h2>Commit e Histórico</h2>
+                <p>Os commits no Git são como pontos de controle em uma longa jornada. Eles permitem que você volte no tempo, revise mudanças e até desfaça erros.</p>
+                <div class="command-box">
+                    <code>git add &lt;arquivo&gt;</code><br>
+                    <code>git commit -m "Mensagem do commit"</code>
+                </div>
+                <p>Use <code>git add</code> para preparar alterações e <code>git commit</code> para registrar essas alterações no histórico do projeto.</p>
+            </div>
+
+            <div class="grid-item summary">
+                <h2>Integração Suave com Merge</h2>
+                <p>O comando <code>git merge</code> ajuda a unir diferentes branches, facilitando a integração de novas funcionalidades no projeto principal.</p>
+                <div class="command-box">
+                    <code>git merge &lt;nome-da-branch&gt;</code>
+                </div>
+            </div>
+
+            <div class="grid-item about">
+                <h2>Tags para Lançamentos</h2>
+                <p>As <em>tags</em> no Git são usadas para marcar versões estáveis do projeto, facilitando o rastreamento de lançamentos importantes.</p>
+                <div class="command-box">
+                    <code>git tag -a v1.0.0 -m "Primeira versão estável"</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <a href="https://linkedin.com/in/luizfernandomaiadasilva/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/LuizSilva-1" target="_blank">GitHub</a>
+            <a href="mailto:luiz.network2@gmail.com">Email</a>
+        </footer>
+    </div>
+</body>
+</html>

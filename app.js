@@ -6,7 +6,7 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-// Rotas
+// Rotas para as páginas principais
 app.get('/', (req, res) => {
     res.render('index');
 });
@@ -21,6 +21,11 @@ app.get('/projetos', (req, res) => {
 
 app.get('/certificacoes', (req, res) => {
     res.render('certificacoes');
+});
+
+// Rota para o artigo específico "Dominando o Git"
+app.get('/dominando-git', (req, res) => {
+    res.render('dominando-git');
 });
 
 // Iniciando o servidor

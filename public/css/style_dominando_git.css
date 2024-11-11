@@ -1,0 +1,104 @@
+/* Hero Section */
+.hero-article {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 60px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-article h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-article p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Conteúdo do Artigo */
+.article-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.article-content h2 {
+    color: #1e3c72;
+    border-bottom: 2px solid #2a5298;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.article-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.intro {
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Caixas de Comandos */
+.command-box {
+    background-color: #eef6ff;
+    padding: 20px;
+    border-left: 6px solid #007bff;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.command-box code {
+    font-size: 1.1em;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.6;
+}
+
+/* Links no conteúdo */
+.article-content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-content a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #2a5298;
+    color: white;
+    margin-top: 40px;
+    border-top: 3px solid #1e3c72;
+}
+
+.footer a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
